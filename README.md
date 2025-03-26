@@ -7,7 +7,12 @@
 
 <!-- configs -->
 
-**No data**
+| Key                   | Description              | Type     | Default |
+| --------------------- | ------------------------ | -------- | ------- |
+| `auto-commit.apiKey`  | API key for auto-commit  | `string` | ``      |
+| `auto-commit.baseUrl` | Base URL for auto-commit | `string` | ``      |
+| `auto-commit.model`   | Model for auto-commit    | `string` | ``      |
+| `auto-commit.prompt`  | Prompt for auto-commit   | `string` | ``      |
 
 <!-- configs -->
 
@@ -15,6 +20,9 @@
 
 <!-- commands -->
 
-**No data**
+| Command                             | Title                     |
+| ----------------------------------- | ------------------------- |
+| `auto-commit.generateCommitMessage` | Generate Commit Message   |
+| `auto-commit.openSettings`          | Open Auto-Commit Settings |
 
 <!-- commands -->

@@ -33,11 +33,45 @@
     "onStartupFinished"
   ],
   "contributes": {
-    "commands": [],
+    "commands": [
+      {
+        "command": "auto-commit.generateCommitMessage",
+        "title": "Generate Commit Message"
+      },
+      {
+        "command": "auto-commit.openSettings",
+        "title": "Open Auto-Commit Settings"
+      }
+    ],
     "configuration": {
       "type": "object",
-      "title": "vscode-auto-commit",
-      "properties": {}
+      "title": "auto-commit",
+      "properties": {
+        "auto-commit.apiKey": {
+          "type": "string",
+          "description": "API key for auto-commit"
+        },
+        "auto-commit.baseUrl": {
+          "type": "string",
+          "description": "Base URL for auto-commit"
+        },
+        "auto-commit.model": {
+          "type": "string",
+          "description": "Model for auto-commit"
+        },
+        "auto-commit.prompt": {
+          "type": "string",
+          "description": "Prompt for auto-commit"
+        }
+      }
+    },
+    "menus": {
+      "scm/title": [
+        {
+          "command": "auto-commit.generateCommitMessage",
+          "group": "navigation"
+        }
+      ]
     }
   },
   "scripts": {
@@ -62,8 +96,10 @@
     "bumpp": "^10.0.3",
     "eslint": "^9.20.1",
     "esno": "^4.8.0",
+    "openai": "^4.89.0",
     "pnpm": "^10.4.1",
     "reactive-vscode": "^0.2.10",
+    "simple-git": "^3.27.0",
     "tsup": "^8.3.6",
     "typescript": "^5.7.3",
     "vite": "^6.1.0",
